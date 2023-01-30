@@ -1,0 +1,45 @@
+.animals {
+    & .img-fluid{
+        width: 100%;
+        height: auto;
+    }
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    & .chicken-part {
+        fill: #ffff0000;
+        &:hover {
+            fill: #ffff0050;
+        }
+    }
+    &-info {
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 3px 4px 12px 4px rgb(0 0 0 / 60%);
+        margin: 20px 0;
+        color: rgb(81, 81, 81);
+    }
+    &-part-name, &-weight, &-quantity {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 18px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 991px) {
+    .animals {
+        &-container {
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+    }
+}
