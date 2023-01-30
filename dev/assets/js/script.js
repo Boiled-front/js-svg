@@ -7,7 +7,15 @@ const animalSvg = () => {
 
         const part = document.querySelectorAll(animalSelector)
         part.forEach( element => {
-            element.classList.add('test')
+            element.addEventListener('mouseover', function() {
+                let dataBody = element.getAttribute('data-body');
+                let dataWeight = element.getAttribute('data-weight');
+                let dataQuantity = element.getAttribute('data-quantity');
+
+                partCell.innerText = dataBody;
+                weightCell.innerText = dataWeight;
+                quantityCell.innerText = dataQuantity;
+            })
         })
 
 
