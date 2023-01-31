@@ -1,4 +1,21 @@
 .animals {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        max-width: 1000px;
+        width: 100%;
+        margin: 40px auto;
+        & > li {
+            border: 2px solid;
+            list-style-type: none;
+            padding: 10px 25px;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
     & .img-fluid{
         width: 100%;
         height: auto;
@@ -8,13 +25,28 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
-        max-width: 800px;
+        max-width: 1000px;
         margin: 0 auto;
+    }
+    & .hidden {
+        display: none;
     }
     & .chicken-part {
         fill: #ffff0000;
         &:hover {
             fill: #ffff0050;
+        }
+    }
+    & .pig-part {
+        fill: #FFC0CB00;
+        &:hover {
+            fill: #FFC0CB50;
+        } 
+    }
+    & .cow-part {
+        fill: #A52A2A00;
+        &:hover {
+            fill: #A52A2A50;
         }
     }
     &-info {
@@ -25,6 +57,9 @@
         box-shadow: 3px 4px 12px 4px rgb(0 0 0 / 60%);
         margin: 20px 0;
         color: rgb(81, 81, 81);
+        & h4 {
+            margin: 0;
+        }
     }
     &-part-name, &-weight, &-quantity {
         font-size: 20px;
